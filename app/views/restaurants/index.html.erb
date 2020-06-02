@@ -1,7 +1,16 @@
 <h1>Restaurants</h1>
 
+<div class="filter-bar">
+	<%= simple_form_for :search, method: :get, url: restaurants_path do |f| %>
+		<%= f.input :name %>
+		<%= f.input :neighborhood, collection: Restaurant.distinct.pluck(:neighborhood) %>
+		<%= f.submit "Filter" %>
+	<% end %>
+</div>
+
 <ul>
   <% @restaurants.each do |restaurant| %>
     <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
   <% end %>
 </ul>
+
