@@ -1,6 +1,8 @@
 ## Goal
 This is an app to teach how to implement a filter form in Rails using the basics.
 
+Check my other demos [here](https://github.com/andrerferrer/dedemos/).
+
 ## How to
 ### 1. Add a filter in the [view](https://github.com/andrerferrer/basic-filter-demo/blob/master/app/views/restaurants/index.html.erb)
 
